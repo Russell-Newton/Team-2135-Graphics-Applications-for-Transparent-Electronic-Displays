@@ -1,0 +1,8 @@
+.button {
+    -fx-text-alignment: center;
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Times New Roman";
+    -fx-min-height: 83;
+    -fx-min-width: 382;
+}

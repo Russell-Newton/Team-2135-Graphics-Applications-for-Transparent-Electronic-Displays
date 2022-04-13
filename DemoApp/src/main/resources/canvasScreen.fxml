@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<AnchorPane prefHeight="760.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <HBox layoutX="28.0" layoutY="30.0" prefHeight="100.0" prefWidth="1010.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="102.0" prefWidth="140.0" text="Back" />
+            <TextArea prefHeight="100.0" prefWidth="732.0" />
+            <Button mnemonicParsing="false" prefHeight="102.0" prefWidth="140.0" text="Help" />
+         </children>
+      </HBox>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="573.0" layoutX="28.0" layoutY="159.0" stroke="BLACK" strokeType="INSIDE" width="1010.0" />
+   </children>
+</AnchorPane>
