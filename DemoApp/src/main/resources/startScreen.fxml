@@ -6,7 +6,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<?import java.net.URL?>
+<StackPane fx:controller="StartScreenController"
+        maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@StartScreen.css"/>
+   </stylesheets>
    <children>
       <ImageView fitHeight="760.0" fitWidth="1241.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -15,7 +20,8 @@
       </ImageView>
       <AnchorPane prefHeight="387.0" prefWidth="740.0">
          <children>
-            <Button fx:id="startButton" layoutX="605.0" layoutY="538.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="382.0" text="Button" />
+            <Button fx:id="startButton" onAction="#startButtonHandler"
+                    layoutX="605.0" layoutY="538.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="382.0" text="Button" />
          </children>
       </AnchorPane>
    </children>
