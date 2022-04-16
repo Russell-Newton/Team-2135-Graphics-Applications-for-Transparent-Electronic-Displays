@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<?import java.net.URL?>
 <AnchorPane prefHeight="760.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MenuScreenController">
    <stylesheets>
-      <URL value="@MenuScreen.css"></URL>
+      <URL value="@MenuScreen.css" />
    </stylesheets>
    <children>
-      <ImageView fitHeight="762.0" fitWidth="1100.0" pickOnBounds="true">
+      <ImageView fitHeight="762.0" fitWidth="1068.0" pickOnBounds="true">
          <image>
             <Image url="@images/backdropCommon.png" />
          </image>
       </ImageView>
-      <Button onAction="#canvasButtonHandler"
-              layoutX="366.0" layoutY="297.0" mnemonicParsing="false" prefHeight="123.0" prefWidth="368.0" text="Canvas">
+      <Button layoutX="366.0" layoutY="297.0" mnemonicParsing="false" onAction="#canvasButtonHandler" prefHeight="123.0" prefWidth="368.0" text="Canvas">
          <font>
             <Font size="39.0" />
          </font>
       </Button>
-      <Button onAction="#aircraftButtonHandler"
-              layoutX="366.0" layoutY="454.0" mnemonicParsing="false" prefHeight="123.0" prefWidth="368.0" text="Aircraft Display">
+      <Button layoutX="366.0" layoutY="454.0" mnemonicParsing="false" onAction="#aircraftButtonHandler" prefHeight="123.0" prefWidth="368.0" text="Aircraft Display">
          <font>
             <Font size="39.0" />
          </font>

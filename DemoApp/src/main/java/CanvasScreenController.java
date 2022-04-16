@@ -12,12 +12,13 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
+import java.sql.Time;
 
 public class CanvasScreenController {
 
     @FXML private Button help;
     @FXML private Button back;
-    @FXML private TextArea textField;
+    @FXML private Label output;
     @FXML private Rectangle canvas;
     @FXML private HBox topBar;
 
@@ -27,6 +28,9 @@ public class CanvasScreenController {
 
     @FXML private ImageView exit;
 
+    private Time timer;
+    private long start;
+
     @FXML public void backButtonHandler(ActionEvent actionEvent) throws IOException {
         SceneManager.getInstance().changeScene("menuScreen.fxml");
     }
@@ -35,25 +39,23 @@ public class CanvasScreenController {
         System.out.println("handling help button");
         help.setDisable(true);
         back.setDisable(true);
-        textField.setDisable(true);
+        output.setDisable(true);
         topBar.setOpacity(30.0);
+        help.setOpacity(0);
+        back.setOpacity(0);
         canvas.setOpacity(30.0);
         //this wont change the stroke of the rectangle
         //we can add the help text on top of the rectangle and add an exit in the corner
-
-//        if (!backPane.getChildren().contains(helpScreen)) {
-//            setUpHelpText();
-//        } else
-//            helpScreen.setOpacity(100.0);
 
         setUpHelpText();
         backPane.getChildren().add(helpScreen);
     }
 
     public void setUpHelpText() {
-        exit = new ImageView(new Image("images/icon.png"));
-        exit.setLayoutX(back.getLayoutX());
-        exit.setLayoutY(back.getLayoutY());
+        exit = new ImageView(new Image("images/exit.png"));
+        exit.setId("exit");
+        exit.setLayoutX(71);
+        exit.setLayoutY(54);
         exit.setOnMouseReleased(this::handleExitButton);
 
         VBox text = new VBox(10);
@@ -81,12 +83,24 @@ public class CanvasScreenController {
         helpScreen.getChildren().addAll(exit, text);
     }
 
+    @FXML public void rectangleMousePressedHandler(MouseEvent event) {
+        start = System.currentTimeMillis();
+    }
+
+    @FXML public void rectangleMouseReleasedHandler(MouseEvent event) {
+        long end = System.currentTimeMillis();
+        long elapsed = end - start;
+        output.setText("Click performed for " + elapsed + "ms.");
+    }
+
     public void handleExitButton(MouseEvent event) {
         help.setDisable(false);
         back.setDisable(false);
-        textField.setDisable(false);
+        output.setDisable(false);
         topBar.setOpacity(100.0);
         canvas.setOpacity(100.0);
+        help.setOpacity(100);
+        back.setOpacity(100);
         backPane.getChildren().remove(helpScreen);
     }
 //    public static Scene getScene() {

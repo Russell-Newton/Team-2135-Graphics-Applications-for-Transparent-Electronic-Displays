@@ -6,13 +6,23 @@
 }
 
 .button {
-    -fx-font-family: "Agency FB";
+    -fx-font-family: "Eras Bold ITC";
+    -fx-font-size: 26px;
+    -fx-text-fill: black;
+    -fx-effect: innershadow(gaussian, rgba(90, 86, 86, 0.5), 20,0,0,0);
 }
 
 #line1, #line2, #line3 {
-    -fx-font-family: "Dubai Medium";
+    -fx-font-family: "Arial Rounded MT Bold";
     -fx-font-size: 35px;
-    -fx-text-fill: lightblue;
+    -fx-text-fill: black;
     -fx-text-alignment: center;
     -fx-wrap-text: true;
+}
+
+#output {
+    -fx-alignment: center;
+    -fx-font-size: 30px;
+    -fx-text-fill: blue;
+    -fx-font-family: "Arial Rounded MT Bold";
 }

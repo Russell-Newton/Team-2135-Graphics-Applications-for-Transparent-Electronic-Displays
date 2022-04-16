@@ -6,3 +6,10 @@
     -fx-min-height: 83;
     -fx-min-width: 382;
 }
+
+.button {
+    -fx-font-family: "Eras Bold ITC";
+    -fx-font-size: 26px;
+    -fx-text-fill: black;
+    -fx-effect: innershadow(gaussian, rgba(90, 86, 86, 0.5), 20,0,0,0);
+}
