@@ -8,6 +8,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
@@ -80,6 +81,12 @@ public class CanvasScreenController {
 
         text.getChildren().addAll(line1, line2, line3);
 
+        int i = backPane.getChildren().size() - 1;
+        while (backPane.getChildren().get(i) instanceof Circle) {
+            backPane.getChildren().get(i).setOpacity(0);
+            i--;
+        }
+
         helpScreen.getChildren().addAll(exit, text);
     }
 
@@ -91,6 +98,21 @@ public class CanvasScreenController {
         long end = System.currentTimeMillis();
         long elapsed = end - start;
         output.setText("Click performed for " + elapsed + "ms.");
+        Circle dot = new Circle();
+        dot.setRadius(5);
+        dot.setCenterX(event.getSceneX());
+        dot.setCenterY(event.getSceneY());
+        backPane.getChildren().add(dot);
+    }
+
+    @FXML public void clearHandler() {
+        int i = backPane.getChildren().size() - 1;
+        while (backPane.getChildren().get(i) instanceof Circle) {
+            backPane.getChildren().remove(i);
+            i--;
+        }
+
+        output.setText("");
     }
 
     public void handleExitButton(MouseEvent event) {
@@ -102,6 +124,12 @@ public class CanvasScreenController {
         help.setOpacity(100);
         back.setOpacity(100);
         backPane.getChildren().remove(helpScreen);
+
+        int i = backPane.getChildren().size() - 1;
+        while (backPane.getChildren().get(i) instanceof Circle) {
+            backPane.getChildren().get(i).setOpacity(100);
+            i--;
+        }
     }
 //    public static Scene getScene() {
 //        StackPane root = new StackPane();

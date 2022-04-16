@@ -2,6 +2,7 @@ import javafx.event.*;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.shape.Circle;
 
 import java.io.IOException;
 

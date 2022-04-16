@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane fx:id="backPane" prefHeight="760.0" prefWidth="1060.0" styleClass="CanvasScreen.css" stylesheets="@CanvasScreen.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CanvasScreenController">
+<AnchorPane fx:id="backPane" onKeyReleased="#clearHandler" prefHeight="760.0" prefWidth="1060.0" styleClass="CanvasScreen.css" stylesheets="@CanvasScreen.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CanvasScreenController">
    <children>
       <HBox fx:id="topBar" layoutX="28.0" layoutY="30.0" prefHeight="100.0" prefWidth="1010.0">
          <children>
