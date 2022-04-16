@@ -21,7 +21,7 @@
       <AnchorPane prefHeight="387.0" prefWidth="740.0">
          <children>
             <Button fx:id="startButton" onAction="#startButtonHandler"
-                    layoutX="605.0" layoutY="538.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="382.0" text="Button" />
+                    layoutX="605.0" layoutY="538.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="382.0" text="Start" />
          </children>
       </AnchorPane>
    </children>
