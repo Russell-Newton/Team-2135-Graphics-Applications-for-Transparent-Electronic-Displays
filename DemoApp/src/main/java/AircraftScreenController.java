@@ -1,6 +1,7 @@
 import javafx.event.*;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 
@@ -8,20 +9,22 @@ public class AircraftScreenController {
 
     static int index = 0;
 
-    @FXML private ImageView image1;
+    @FXML private ImageView radar;
     //@FXML private ImageView image2;
 
     @FXML public void backButtonHandler(ActionEvent actionEvent) throws IOException {
         SceneManager.getInstance().changeScene("menuScreen.fxml");
     }
 
-    @FXML public void clickActionHandler(ActionEvent event) throws IOException {
+    @FXML public void clickActionHandler(MouseEvent event) throws IOException {
         if (index == 0) {
             index = 1;
-            image1.setOpacity(0);
+            radar.setFitWidth(radar.getFitWidth() * 2);
+            radar.setFitHeight(radar.getFitHeight() * 2);
         } else {
             index = 0;
-            image1.setOpacity(100);
+            radar.setFitWidth(radar.getFitWidth() / 2);
+            radar.setFitHeight(radar.getFitHeight() / 2);
         }
         System.out.println(index);
     }
