@@ -6,23 +6,15 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Rectangle?>
 
-
-<?import java.net.URL?>
-<AnchorPane prefHeight="760.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CanvasScreenController">
-   <stylesheets>
-      <URL value="@CanvasScreen.css">
-
-      </URL>
-   </stylesheets>
+<AnchorPane fx:id="backPane" prefHeight="760.0" prefWidth="1060.0" styleClass="CanvasScreen.css" stylesheets="@CanvasScreen.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CanvasScreenController">
    <children>
-      <HBox layoutX="28.0" layoutY="30.0" prefHeight="100.0" prefWidth="1010.0">
+      <HBox fx:id="topBar" layoutX="28.0" layoutY="30.0" prefHeight="100.0" prefWidth="1010.0">
          <children>
-            <Button onAction="#backButtonHandler"
-                    mnemonicParsing="false" prefHeight="102.0" prefWidth="140.0" text="Back" />
-            <TextArea prefHeight="100.0" prefWidth="732.0" />
-            <Button onAction="#helpButtonHandler" mnemonicParsing="false" prefHeight="102.0" prefWidth="140.0" text="Help" />
+            <Button fx:id="back" mnemonicParsing="false" onAction="#backButtonHandler" prefHeight="102.0" prefWidth="140.0" text="Back" />
+            <TextArea fx:id="textField" prefHeight="100.0" prefWidth="732.0" />
+            <Button fx:id="help" mnemonicParsing="false" onAction="#helpButtonHandler" prefHeight="102.0" prefWidth="140.0" text="Help" />
          </children>
       </HBox>
-      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="573.0" layoutX="28.0" layoutY="159.0" stroke="BLACK" strokeType="INSIDE" width="1010.0" />
+      <Rectangle fx:id="canvas" arcHeight="20.0" arcWidth="20.0" fill="BEIGE" height="573.0" layoutX="28.0" layoutY="159.0" stroke="BLACK" strokeType="INSIDE" width="1010.0" />
    </children>
 </AnchorPane>

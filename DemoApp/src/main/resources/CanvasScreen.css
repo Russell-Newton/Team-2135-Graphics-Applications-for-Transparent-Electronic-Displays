@@ -4,3 +4,15 @@
     height: 573px;
     width: 1010px;
 }
+
+.button {
+    -fx-font-family: "Agency FB";
+}
+
+#line1, #line2, #line3 {
+    -fx-font-family: "Dubai Medium";
+    -fx-font-size: 35px;
+    -fx-text-fill: lightblue;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}

@@ -6,6 +6,7 @@ import java.io.IOException;
 public class MenuScreenController {
     @FXML public void canvasButtonHandler(ActionEvent actionEvent) throws IOException {
         SceneManager.getInstance().changeScene("canvasScreen.fxml");
+
     }
 
     @FXML public void aircraftButtonHandler(ActionEvent actionEvent) throws IOException {
